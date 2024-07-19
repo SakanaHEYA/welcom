@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutiger Aero Style Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <script>
+        // JavaScript for page transition
+        document.addEventListener("DOMContentLoaded", function() {
+            var buttons = document.querySelectorAll(".button");
+
+            buttons.forEach(function(button) {
+                button.addEventListener("click", function(event) {
+                    event.preventDefault(); // Prevent default link behavior
+
+                    var url = "";
+                    if (this.classList.contains("button1")) {
+                        url = "https://www.youtube.com"; // YouTube URL or any other link
+                    } else if (this.classList.contains("button2")) {
+                        url = "https://www.google.com"; // Google URL or any other link
+                    } else if (this.classList.contains("button3")) {
+                        url = "https://www.facebook.com"; // Facebook URL or any other link
+                    }
+
+                    // Add transition effect
+                    document.body.style.opacity = "0"; // Fade out
+                    setTimeout(function() {
+                        window.location.href = url; // Redirect to the URL after fade out
+                    }, 500); // Adjust the timeout as needed (500ms in this example)
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <video autoplay muted loop class="video-background">
+        <source src="0714.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>Welcome to Park</h1>
+        <p>There are many plants here, let us take you to know them!</p>
+        
+        <div class="button-container">
+            <a href="#" class="button button1"><span>三葉草</span></a>
+            <a href="#" class="button button2"><span>蒲公英</span></a>
+            <a href="#" class="button button3"><span></span></a>
+        </div>
+    </div>
+</body>
+</html>
