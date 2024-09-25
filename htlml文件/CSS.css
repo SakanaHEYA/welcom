@@ -1,0 +1,82 @@
+/* 全局样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Frutiger Aero', Arial, sans-serif;
+    background: linear-gradient(135deg, #E0F7FA, #B2EBF2); /* 渐变背景 */
+    overflow-x: hidden;
+}
+
+/* 页面主内容 */
+.main-content {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* 按钮样式 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #00BCD4, #0288D1); /* 按钮渐变 */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+audio {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
